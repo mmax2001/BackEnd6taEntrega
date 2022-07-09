@@ -1,0 +1,32 @@
+[
+   {
+      "msgName": "fulanito@gmail.com",
+      "msgText": "Hola",
+      "msgTime": "",
+      "id": 1
+   },
+   {
+      "msgName": "fulanito@gmail.com",
+      "msgText": "Hola",
+      "msgTime": "",
+      "id": 2
+   },
+   {
+      "msgName": "menganito@gmailcom",
+      "msgText": "Como va?",
+      "msgTime": "",
+      "id": 3
+   },
+   {
+      "msgName": "fulanito@gmail.com",
+      "msgText": "Hola",
+      "msgTime": "",
+      "id": 4
+   },
+   {
+      "msgName": "menganito@gmailcom",
+      "msgText": "Como va?",
+      "msgTime": "",
+      "id": 5
+   }
+]
