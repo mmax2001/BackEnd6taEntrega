@@ -64,7 +64,7 @@ function generarChat(mensajes) {
             <div>
                 <b style="color:blue;">${mensaje.msgName}</b>
                 [<span style="color:brown;">${mensaje.msgTime}</span>] :
-                <i style="color:green;">${mensaje.Text}</i>
+                <i style="color:green;">${mensaje.msgText}</i>
             </div>
         `)
     }).join(" ");

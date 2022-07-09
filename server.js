@@ -57,7 +57,7 @@ router.get('/', async (req, res) => {
 
 //configuro la conexion para enviar mensajes desde el servidor al cliente 
 //con el nombre del evento 'connection' y una funcion de callback
-io.on('connection',(socket)=>{
+io.on('connection',async (socket)=>{
     console.log('Cliente conectado')
     // socket.emit('mi mensaje','Este es mi mensaje desde el servidor')
     
@@ -71,14 +71,14 @@ io.on('connection',(socket)=>{
         io.sockets.emit('listadoProductos', ContenedorProductos.getAll());
     })
     
-    // //Cargo los mensajes previos
-    // socket.emit('mensajes', ChatMsjs.getAll());
+    //Cargo los mensajes previos
+    socket.emit('mensajes', await ChatMsjs.getAll());
     
-    // //Muestro los nuevos mensajes
-    // socket.on('ingresoMensaje', async mensaje => {        
-    //     await ChatMsjs.save(mensaje)
-    //     io.sockets.emit('mensajes', ChatMsjs.getAll());
-    // })
+    //Muestro los nuevos mensajes
+    socket.on('ingresoMensaje', async mensaje => {        
+        await ChatMsjs.save(mensaje)
+        io.sockets.emit('mensajes', ChatMsjs.getAll());
+    })
     
 })
 
